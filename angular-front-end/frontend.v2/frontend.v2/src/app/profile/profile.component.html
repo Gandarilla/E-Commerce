@@ -1,0 +1,60 @@
+ <!--Icons-->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css"> 
+ <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+ <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+ <link href="./profile.component.css" rel="stylesheet" />
+ 
+ <body>
+ 
+ <div class="wrapper">
+    <div class="left">
+        <img src="../../assets/img/dog.jpg"
+        alt="user" width="40%">
+         <div class="choosefile-btn">
+            
+           <!-- <input type="file" name="file"/>
+            <input id="fileInput" type='file' (change)="onSelectFile($event)">
+ <button *ngIf="url" (click)="delete()" >delete</button>-->
+        </div>
+ <div *ngIf="user">
+     <h3>{{ user.username }}</h3>
+     <h4>{{ user.email}}</h4>
+     <br>
+ </div>
+ <div class="right">
+     <div class="info">
+         <h3>Information</h3>
+         <div class="info_data">
+            <span>
+              <div class="data">
+                <h3>Phone</h3>
+                 <p>0001-213-998761</p>
+           </div>
+           <div class="data">
+             <h3>Address</h3>
+              <p>Los Angeles, California</p>
+        </div>
+        
+    </span>
+    <span class="form_data">
+      <form [formGroup] ="aboutMe">
+        <div class="favorite"><h3>My Favorite Anime/Manga</h3>
+            <div><input type="text" id="favorite" placeholder="GHIBLI" /></div></div>
+        
+            <div class="aboutme"><h3>About Me</h3>
+            <div><input type="text" id= "aboutme" placeholder="ABOUT ME" /></div></div>
+       </form>
+       <button type="button" (click)="onClickMe()" class="button">Submit</button>
+      </span>
+       
+
+           <div class="social_media">
+             <h3>Social Media</h3>
+             <ul>
+               <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+               <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+               <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+           </ul>
+       </div>
+         </div>
+     </div>
